@@ -1,10 +1,10 @@
 name 'px4-ros-workbench'
 maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer_email 'chris@nolaspring.net'
 license 'all_rights'
-description 'Installs/Configures px4-ros-workbench'
-long_description 'Installs/Configures px4-ros-workbench'
-version '0.1.0'
+description 'Provisions and configues infrastructure for PX4 networked feature developent'
+long_description 'Provisions and configues infrastructure for PX4 networked feature developent'
+version '0.0.1'
 
 # If you upload to Supermarket you should set this so your cookbook
 # gets a `View Issues` link

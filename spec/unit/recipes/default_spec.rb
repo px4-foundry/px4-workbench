@@ -14,16 +14,17 @@ describe 'px4-ros-workbench::default' do
     end
 
     it 'installs or verifies target docker services' do
-     expect { chef_run }.to install_package 'docker'
+      expect { chef_run }.to install_package 'docker'
     end
 
-    it 'pulls down target PX4 docker-container for development' do
-      expect { chef_run }.to fetch_resources 'for docker'
+    it 'includes recipe that pulls docker build environment' do
+      expect { chef_run }.includes_recipe 'px4-build-environment'
     end
+
+    it 'pull'
 
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
-
   end
 end

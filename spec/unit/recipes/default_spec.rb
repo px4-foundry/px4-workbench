@@ -13,8 +13,17 @@ describe 'px4-ros-workbench::default' do
       runner.converge(described_recipe)
     end
 
+    it 'installs or verifies target docker services' do
+     expect { chef_run }.to install_package 'docker'
+    end
+
+    it 'pulls down target PX4 docker-container for development' do
+      expect { chef_run }.to fetch_resources 'for docker'
+    end
+
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
+
   end
 end

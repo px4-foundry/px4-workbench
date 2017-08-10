@@ -40,4 +40,4 @@ echo DATA_BAGS_PATH='data_bags' >> .env
 echo ROLES_PATH='roles' >> .env
 echo NODES_PATH='nodes' >> .env
 #start vagrant and 1. build a docker container and run chef-commands to build out our provisioning node
-vagrant up
+vagrant up --provider docker

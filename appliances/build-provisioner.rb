@@ -6,7 +6,7 @@ with_driver 'docker'
 
 machine 'px4-infrastructure-engine' do
   recipe 'openssh::default'
-  recipe 'oshardening::default'
+  
 
   machine_options(
     docker_options: {
@@ -56,4 +56,4 @@ machine 'px4-infrastructure-engine' do
        :read_timeout => 1000,
       }
     )
-end
+  end

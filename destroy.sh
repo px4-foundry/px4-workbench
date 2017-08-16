@@ -11,9 +11,8 @@ eval "$(rbenv init -)"
 rbenv shell chefdk
 rbenv rehash
 
+export CHEF_DRIVER=docker
 
-bundle install
-
-chef-zero &
+#bundle install
 #bundler executes chef-client in zero mode against the ruby description of an image
-CHEF_DRIVER=docker bundle exec chef-client -z /home/christopher/px4-operations/px4-workbench/appliances/provisioner.rb
+ bundle exec chef-client -z /home/christopher/px4-operations/px4-workbench/appliances/destroy-provisioner.rb
